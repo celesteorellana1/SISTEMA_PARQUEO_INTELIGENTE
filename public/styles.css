@@ -1,0 +1,159 @@
+:root {
+  --bg-dark: #0f172a;
+  --card-bg: #1e293b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --green: #10b981;
+  --green-glow: rgba(16, 185, 129, 0.4);
+  --red: #ef4444;
+  --red-glow: rgba(239, 68, 68, 0.4);
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  margin: 0;
+  padding: 30px;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  color: #38bdf8;
+  margin: 0 0 5px 0;
+}
+
+.dashboard-header p {
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Tarjetas KPI de resumen */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+}
+
+.kpi-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #334155;
+}
+
+.kpi-title {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.kpi-value {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.kpi-value.green { color: var(--green); }
+.kpi-value.red { color: var(--red); }
+
+/* Layout de espacios */
+.section-title {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: var(--text-main);
+}
+
+.parqueos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+}
+
+.slot-card {
+  padding: 25px 15px;
+  border-radius: 12px;
+  text-align: center;
+  border: none !important;
+  outline: none;
+  transition: all 0.3s ease;
+  color: #ffffff;
+}
+
+.slot-card.libre {
+  background-color: #059669; 
+  box-shadow: none;
+}
+
+.slot-card.ocupado {
+  background-color: #dc2626; 
+  box-shadow: none;
+}
+
+.slot-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.slot-status {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.slot-card.libre .slot-status { 
+  color: #e0f2fe; 
+}
+
+.slot-card.ocupado .slot-status { 
+  color: #fee2e2; 
+}
+
+/* Tabla Bitácora Dark */
+.table-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #334155;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px 18px;
+  text-align: left;
+}
+
+th {
+  background: #0f172a;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+td {
+  border-bottom: 1px solid #334155;
+  font-size: 0.95rem;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}

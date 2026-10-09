@@ -1,0 +1,77 @@
+🚗 Parqueo Inteligente - Proyecto
+
+Sistema web de gestión para estacionamientos desarrollado con Node.js, Express y MySQL.
+
+📋 Requisitos Previos
+
+Antes de comenzar, asegúrate de tener instalado en tu equipo:
+
+Node.js (Versión 16.x o superior)
+
+Servidor MySQL (a través de MySQL Workbench, XAMPP, phpMyAdmin, o MySQL Server CLI)
+
+Git
+
+🛠️ Instalación del Proyecto
+
+Sigue estos pasos para configurar el entorno local:
+
+1. Clonar el repositorio
+
+git clone <URL_DE_TU_REPOSITORIO>
+cd PARQUEO-INTELIGENTE-PROYECTO
+
+
+2. Instalar dependencias
+
+Ejecuta el siguiente comando para instalar todos los módulos y librerías necesarias especificadas en el archivo package.json:
+
+npm install
+
+
+📦 Paquetes y Librerías que se instalarán:
+
+express: Framework web para Node.js que gestiona las rutas y peticiones HTTP del servidor.
+
+mysql2: Conector optimizado para interactuar con la base de datos MySQL.
+
+cors: Middleware que habilita el intercambio de recursos de origen cruzado entre el frontend y el backend.
+
+body-parser: Middleware para procesar y manejar solicitudes HTTP entrantes con cuerpo en formato JSON.
+
+🗄️ Configuración de la Base de Datos
+
+Abre tu gestor de base de datos MySQL (por ejemplo, MySQL Workbench o phpMyAdmin).
+
+Importa y ejecuta el script localizado en el archivo bd.sql dentro de la raíz del proyecto para crear la base de datos y sus tablas.
+
+Configura las credenciales de conexión dentro del archivo server.js:
+
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'tu_usuario',     // Ejemplo: 'root'
+  password: 'tu_password', // Tu contraseña de MySQL
+  database: 'nombre_bd'   // Nombre de la BD creada con bd.sql
+});
+
+
+🚀 Ejecución de la Aplicación
+
+Para iniciar el servidor del proyecto, ejecuta:
+
+node server.js
+
+
+Si tienes instalado nodemon para reinicio automático durante el desarrollo:
+
+npx nodemon server.js
+
+
+🌐 Acceso a la Aplicación
+
+Una vez que la consola confirme la conexión exitosa a la base de datos y la escucha en el puerto correspondientes, abre tu navegador e ingresa a:
+
+http://localhost:3000
+
+
+(Nota: Modifica el puerto 3000 si está configurado uno distinto en tu archivo server.js).
